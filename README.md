@@ -2,6 +2,12 @@
 
 A private food memory journal with a friendly SVG companion. Record what you ate, keep personal reaction notes, and see a reminder **before saving** a food you previously flagged. No calories, nutrition scores, weight tracking, diagnoses, ingredient guessing, or external AI services.
 
+## Understand and debug the application
+
+Read [the detailed system workflows](docs/system-workflows.md) for architecture, signup/email verification, food/reaction mutations, warning matching, database relationships, private photo cleanup and account deletion diagrams. Use [the debugging field guide](docs/debugging.md) to map a symptom to files, requests, database checks and focused tests.
+
+**Configuration note:** the current runtime reads `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` or `NEXT_PUBLIC_SUPABASE_ANON`, while the original setup/example below uses `NEXT_PUBLIC_SUPABASE_ANON_KEY`. See [the environment boundary explanation](docs/system-workflows.md#15-deployment-and-environment-boundaries) before configuring or debugging a deployment.
+
 ## Run locally
 
 Requires Node.js 22.16+ (Node 24 recommended) and npm. On Windows PowerShell, use `npm.cmd` if script execution policy blocks `npm`.
