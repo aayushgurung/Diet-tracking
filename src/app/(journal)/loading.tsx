@@ -1,0 +1,1 @@
+export default function Loading() { return <div className="loading-page" role="status"><div className="skeleton" style={{height:32,width:220}} /><div className="skeleton" style={{height:220,marginTop:32}} /><div className="skeleton" style={{height:110,marginTop:24}} /><span className="sr-only">Opening your journal…</span></div>; }
