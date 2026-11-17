@@ -5,7 +5,7 @@ import { subDays } from "date-fns";
 
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
 const { NEXT_PUBLIC_SUPABASE_URL: url, SEED_EMAIL: email, SEED_PASSWORD: password, SEED_CONFIRM: confirmation } = process.env;
-const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON;
 if (!url || !key || !email || !password || confirmation !== "DEVELOPMENT") {
   console.error("Use a disposable development account. Set SEED_EMAIL, SEED_PASSWORD and SEED_CONFIRM=DEVELOPMENT in your shell, plus the Supabase variables in .env.local.");
   process.exit(1);
